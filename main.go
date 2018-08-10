@@ -6,7 +6,7 @@ import (
 
 type contactInfo struct {
 	email   string
-	zipcode int
+	zipCode int
 }
 
 type person struct {
@@ -16,11 +16,14 @@ type person struct {
 }
 
 func main() {
-	var alex person
+	jim := person{
+		firstName: "Jim",
+		lastName:  "Party",
+		contact: contactInfo{
+			email:   "jim@example.com",
+			zipCode: 94000,
+		},
+	}
 
-	alex.firstName = "Alex"
-	alex.lastName = "Anderson"
-
-	fmt.Println(alex)
-	fmt.Printf("%+v", alex)
+	fmt.Printf("%+v", jim)
 }
