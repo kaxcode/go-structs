@@ -4,9 +4,15 @@ import (
 	"fmt"
 )
 
+type contactInfo struct {
+	email   string
+	zipcode int
+}
+
 type person struct {
 	firstName string
 	lastName  string
+	contact   contactInfo
 }
 
 func main() {
